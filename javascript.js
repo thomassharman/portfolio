@@ -34,6 +34,10 @@ window.onload = responsiveMenu
 
 const styleMode = function () {
 console.log('styleMode loaded')
+
+const lightSwitch = 
+const darkSwitch = 
+
 }
 
 
