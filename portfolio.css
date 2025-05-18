@@ -1,0 +1,71 @@
+* {
+    --global-black: #2f2f2f;
+    --global-lightgrey: #7d7d7d;
+    --global-white: #ffffff;
+    --global-font-fam: system-ui, 
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --global-font-wei: 200;
+    --global-font-siz: 10px;
+    --global-shadow: 3px 5px 0px;
+    --global--butt: #0088cc;
+    --global--buttfont: white;
+    --global-font-col: var(--global-lightgrey);
+}
+
+body {
+    padding: 0;
+    margin-top: 100px;
+    margin: 0;
+    font-family: var(--global-font-fam);
+    background-color: var(--global-white);
+}
+.menuDiv {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.nav { /*This is also on by default*/
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    background-color: transparent;
+    font-weight: var(--global-font-wei);
+    margin: 10px;
+    border: 1px solid transparent;
+    transition: 1s;
+    color: var(--global-lightgrey);
+}
+
+.nav-item:hover {
+    transition: 1s;
+    color: #2f2f2f;
+    border-bottom: 1px solid var(--global--butt);
+}
+
+.logo {
+display: none;
+}
+
+.menuwaffle { /*This is active by default*/
+    display: none;
+}
+
+.waffleOn {
+    display: block;
+}
+
+.navOff {
+    display: none;
+}
+
+.content {
+    height: 10000px;
+}
