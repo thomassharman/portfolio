@@ -28,7 +28,6 @@ const responsiveFunctions = function() {
     window.addEventListener('resize', () => {loadWaffle(), console.log('resizing...')})
 
 const styleMode = function () {
-console.log('styleMode loaded')
 
 const lightSwitch = document.querySelector('#lightSwitch')
 const darkSwitch = document.querySelector('#darkSwitch')
@@ -49,6 +48,8 @@ const switchMode = function() {
         lightSwitch.classList.remove('switchbtnOn')
         lightSwitch.classList.add('switchbtnOff')
         console.log('Buttons colours switched. Add website change style to follow...')
+        website.classList.remove('light-mode')
+        website.classList.add('dark-mode')
     }
     else if (lightmode != true) {
         lightmode = true
@@ -58,13 +59,26 @@ const switchMode = function() {
         lightSwitch.classList.add('switchbtnOn')
         lightSwitch.classList.remove('switchbtnOff')
         console.log('Buttons colours switched. Add website change style to follow...')
+        website.classList.remove('dark-mode')
+        website.classList.add('light-mode')
     }
 }
 }
+const waffleFunction = function() {
+//waffle functions
+const waffleMenu = document.querySelector('.menuwaffle')
+waffleMenu.addEventListener('click', () => {expandMenu()})
+
+const expandMenu = function() {
+console.log('waffle menu clicked')
+}
+
+}
     return {
-        loadWaffle: loadWaffle(),
+        responsiveFunctions: responsiveFunctions,
+        loadWaffle: loadWaffle,
         styleMode: styleMode(),
-        switchMode: switchMode()
+        waffleFunction: waffleFunction(),
     }
 }
 window.onload = responsiveFunctions
