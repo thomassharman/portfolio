@@ -98,26 +98,39 @@ display: none;
     background-color: var(--global--butt);
     border: 0;
     color: var(--global--buttfont);
+    transition: 1s;
 }
 
-.switchbtnOn:hover {
-background-color: #0088ccac;
-}
 .switchbtnOff {
     background-color: var(--global-menu-col);
     border: 0;
     color: var(--global-tertiary);
-}
-
-.switchbtnOff:hover {
-    background-color:#ececec
+    transition: 1s;
 }
 
 #switch {
     display: flex;
+    margin: 0;
+    padding: 0;
     gap: 0;
     align-items: center;
+    box-shadow: 2px 3px 5px rgb(224, 224, 224);
+    border-radius: 10px;
+    height: fit-content;
 }
+
+#lightSwitch {
+height: 100%;
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
+}
+
+#darkSwitch {
+height: 100%;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
 
 .menu-switch {
     width: 100%;
