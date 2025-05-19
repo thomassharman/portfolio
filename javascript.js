@@ -69,6 +69,7 @@ const waffleFunction = function() {
 const waffleMenu = document.querySelector('.menuwaffle')
 const navItems = document.querySelectorAll('.nav-item') //returns array of menu items
 const mobileItemsContainer = document.createElement('div')
+mobileItemsContainer.classList = 'mobileItemsContainer'
 const mobileMenu = document.querySelector('.mobileMenu') //where we will appendChild the container containing each menu item
 let mobileMenuStatus = false //the mobile menu is not showing by default
 
@@ -83,6 +84,7 @@ items.forEach(item =>
             console.log(mobileNavItemText) //returns each item in the console successfully
             const mobileNavItem = document.createElement('button')
             mobileNavItem.textContent = mobileNavItemText
+            mobileNavItem.classList = 'mobileNavButton'
             mobileItemsContainer.append(mobileNavItem)
             return mobileMenu.appendChild(mobileItemsContainer)
 }
