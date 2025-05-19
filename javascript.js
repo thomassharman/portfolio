@@ -67,12 +67,34 @@ const switchMode = function() {
 const waffleFunction = function() {
 //waffle functions
 const waffleMenu = document.querySelector('.menuwaffle')
-waffleMenu.addEventListener('click', () => {expandMenu()})
+const navItems = document.querySelectorAll('.nav-item') //returns array of menu items
+const mobileItemsContainer = document.createElement('div')
+const mobileMenu = document.querySelector('.mobileMenu') //where we will appendChild the container containing each menu item
+let mobileMenuStatus = false //the mobile menu is not showing by default
 
-const expandMenu = function() {
+waffleMenu.addEventListener('click', () => {expandMenu(navItems), mobileMenuStatus = !mobileMenuStatus //ensures we switch to the opposite status every time clicked//
+    })
+
+const expandMenu = function(items) {
 console.log('waffle menu clicked')
+items.forEach(item => 
+    { if (mobileMenuStatus === false) {
+            const mobileNavItemText = item.textContent
+            console.log(mobileNavItemText) //returns each item in the console successfully
+            const mobileNavItem = document.createElement('button')
+            mobileNavItem.textContent = mobileNavItemText
+            mobileItemsContainer.append(mobileNavItem)
+            return mobileMenu.appendChild(mobileItemsContainer)
 }
-
+else if(mobileMenuStatus === true) {
+    if (mobileMenu.contains(mobileItemsContainer)){
+        mobileItemsContainer.innerHTML = ''
+        mobileMenu.removeChild(mobileItemsContainer)
+    }
+   
+}
+   }, console.log(mobileMenuStatus))
+}
 }
     return {
         responsiveFunctions: responsiveFunctions,
