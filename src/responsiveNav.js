@@ -1,7 +1,3 @@
-//create a light mode and dark mode function
-//create a responsive navigation bar
-//do it all using 
-
 const responsiveFunctions = function() {
     //make menu responsive
     const waffle = document.querySelector('.menuwaffle')
@@ -107,6 +103,6 @@ else if(mobileMenuStatus === true) {
 }
 window.onload = responsiveFunctions
 
-
+export { responsiveFunctions }
 
 

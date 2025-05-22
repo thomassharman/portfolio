@@ -86,6 +86,12 @@ display: none;
 }
 
 .waffleOn {
+    height: 20px;
+    width: 20px;
+    background-image: url('./svg/burger-menu-right-svgrepo-com\ \(2\).svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 50%;
     display: flex;
     align-self: flex-end;
     background-color: transparent;
@@ -121,16 +127,27 @@ display: none;
     gap: 0;
     box-shadow: 2px 3px 5px var(--global-shadow-colour) ;
     border-radius: 10px;
-    height: fit-content;
+    height: 15px;
+    width: 45px;
 }
 
 #lightSwitch {
+flex-grow: 2;
+background-image: url('./svg/sun-svgrepo-com.svg');
+background-size: 30%;
+background-repeat: no-repeat;
+background-position: 50%;
 height: 100%;
 border-bottom-left-radius: 10px;
 border-top-left-radius: 10px
 }
 
 #darkSwitch {
+flex-grow: 2;
+background-image: url('./svg/moon-stars-svgrepo-com.svg');
+background-size: 30%;
+background-repeat: no-repeat;
+background-position: 50%;
 height: 100%;
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
