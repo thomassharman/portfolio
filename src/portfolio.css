@@ -12,6 +12,8 @@
     --global-font-col: black;
     --global-shadow-colour: rgb(196, 196, 196);
     --global-tab: #e6e6e6;
+    --active-tab-colour:  #dddddd;
+    --active-tab-font-colour: var(--global-tertiary)
 }
 
 /*Dark Mode*/
@@ -29,6 +31,8 @@
     --global-font-col: white;
     --global-shadow-colour: rgb(36, 36, 36);
     --global-tab: #373737;
+    --active-tab-colour:  #212121;
+    --active-tab-font-colour: var(--global-tertiary);
 }
 
 p {
@@ -210,4 +214,15 @@ border-bottom-right-radius: 10px;
 .tab {
     display: flex;
     flex-direction: column;
+}
+
+.activeTab {
+    background-color: var(--active-tab-colour);
+    color: var(--active-tab-font-colour);
+    border-bottom: 2px solid var(--global--butt);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 5px;
+    width: 100px;
 }
