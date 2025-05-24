@@ -101,7 +101,6 @@ else if(mobileMenuStatus === true) {
         waffleFunction: waffleFunction(),
     }
 }
-window.onload = responsiveFunctions
 
 export { responsiveFunctions }
 

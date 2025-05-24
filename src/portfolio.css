@@ -10,7 +10,8 @@
     --global--butt: #0088cc;
     --global--buttfont: white;
     --global-font-col: black;
-    --global-shadow-colour: rgb(224, 224, 224);
+    --global-shadow-colour: rgb(196, 196, 196);
+    --global-tab: #e6e6e6;
 }
 
 /*Dark Mode*/
@@ -23,10 +24,11 @@
     --global-font-wei: 200;
     --global-font-siz: 10px;
     --global-shadow: 3px 5px 0px;
-    --global--butt: #0088cc;
+    --global--butt: #cc005c;
     --global--buttfont: white;
     --global-font-col: white;
     --global-shadow-colour: rgb(36, 36, 36);
+    --global-tab: #373737;
 }
 
 p {
@@ -42,16 +44,19 @@ body {
 }
 .menuDiv {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     position: sticky;
     top: 0;
+    height: fit-content;
+    background-color: var(--global-sec);
+    box-shadow: 1px 2px 5px var(--global-shadow-colour);
 }
 
 .nav { /*This is also on by default*/
     display: flex;
-    gap: 5px;
-    justify-content: start;
-    padding: 5px;
+    justify-content: space-evenly;
+    gap: 50px;
+    width: 100%;
     flex-grow: 1;
 }
 
@@ -65,7 +70,6 @@ body {
 .nav-item, .mobileNavButton {
     background-color: transparent;
     font-weight: var(--global-font-wei);
-    margin: 10px;
     border: 1px solid transparent;
     transition: 1s;
     color: var(--global-tertiary);
@@ -155,8 +159,55 @@ border-bottom-right-radius: 10px;
 
 
 .menu-switch {
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+}
+
+.banner {
+    color: var(--global-font-col);
+    padding: 30px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannertext {
+    text-align: center;
+    font-size: 5vh;
+}
+
+.tab-button {
+    transition: 1s;
+    padding: 5px;
+    background-color: transparent;
+    width: 100px;
+    color: var(--global-tertiary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.tab-button:hover {
+    transition: 1s;
+    border-bottom: 2px solid var(--global--butt);
+    color: var(--global-font-col);
+}
+
+.tabsDiv {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
 }
