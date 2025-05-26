@@ -74,9 +74,19 @@ body {
 
 .mobileItemsContainer {
     display: flex;
-    gap: 5px;
+    gap: 10vh;
     flex-direction: column;
     justify-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: var(--active-tab-colour);
+}
+
+.mobileMenu {
+position: fixed;
+z-index: 2;
+top: 10;
+width: 100%;
 }
 
 .nav-item, .mobileNavButton {

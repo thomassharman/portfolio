@@ -22,6 +22,7 @@ const responsiveFunctions = function() {
 
     }
     window.addEventListener('resize', () => {loadWaffle(), console.log('resizing...')})
+    window.addEventListener('load', ()=> {loadWaffle()})
 
 const styleMode = function () {
 
