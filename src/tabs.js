@@ -5,6 +5,7 @@ let tab3;
 let tabContent;
 let tabTitle;
 let tabBody;
+let closeTabBtn;
 
     const tabs = function () {
     tab1 = document.querySelector('#tab-button-1')
@@ -13,6 +14,8 @@ let tabBody;
     tabContent =document.querySelector('.tab-content')
     tabTitle = document.querySelector('.tab-title')
     tabBody = document.querySelector('.tab-text')
+    closeTabBtn =document.querySelector('.close-tab')
+
         if (tab1 && tab2 && tab3) {
             console.log('tabs loaded from tabFunctions successfully. Now add event listeners...')
             const allTabs = [tab1, tab2, tab3]
@@ -22,6 +25,7 @@ let tabBody;
     const clickTab = function () {
     console.log(this)
     const activeTab = this
+    closeTabBtn.addEventListener('click', () => appendTabContent.remove(activeTab))
     if (activeTab.textContent === 'About') {
         console.log('User clicked ',activeTab.textContent,' section...');
         const inactiveTabs = [tab2, tab3]
@@ -57,6 +61,10 @@ let tabBody;
                 tabBody.textContent = `I am still learning to code, but have picked up a lot of front end development skills (as you can see!). My marketing skill profile is much more vast and I encourage you to explore more about me below.`
             }
         },
+        remove: function(tab) {
+            tabContent.setAttribute('id', 'hideTabContent')
+            tabStyles.remove(tab)
+        }
     }
 
     const tabStyles = {
@@ -69,8 +77,16 @@ let tabBody;
             otherTab.classList.add('tab-button')
             otherTab.classList.remove('activeTab') 
             })
-            
             }
+            },
+            remove: function(tab) { 
+                if (tab.classList.contains('activeTab')) {
+                    tab.classList.remove('activeTab')
+                    tab.classList.add('tab-button')
+                }
+                else {
+                    tab.classList.add('tab-button')
+                }
             }
         }
         return {

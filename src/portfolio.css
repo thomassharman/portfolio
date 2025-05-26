@@ -266,3 +266,10 @@ border-bottom-right-radius: 10px;
 #hideTabContent {
     display: none;
 }
+
+.close-tab {
+    background-color: var(--active-tab-colour);
+    color: var(--global-font-col);
+    border: 1px solid var(--global--butt);
+    border-radius: 10px;
+}
